@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm 
+  http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+  
+  <description>My First JPA XML Application</description>
+    <package>model</package>    
+   <entity class="model.Car">
+      <table name = "Car_Table" />
+         <attributes>
+          <basic name ="age">
+              <column name = "car_age" nullable = "false" />
+          </basic>
+          <basic name = "owner"> 
+               <column name = "proprietaire" length= "20" />
+          </basic>
+          <basic name = "constructDate">
+               <column  name = "annee" nullable = "false" />
+               <temporal>DATE</temporal>
+          </basic> 
+          <basic name = "made">
+            <column name = "marque" nullable = "false" />
+          </basic>
+      </attributes>
+   
+   </entity>
+  
+</entity-mappings>
